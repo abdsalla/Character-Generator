@@ -1,21 +1,47 @@
-// Character Generator.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
-#include "pch.h"
 #include <iostream>
+#include <string>
+#include "Character Generator.h"
 
+using namespace std;
+	
+	/*First.CharacterCreation();
+	if (First.characterClass == "Warrior")
+	{
+		
+		Warrior.name = First.name;
+		Warrior.race = First.race;
+		Warrior.characterClass = "Warrior";
+		
+	}
+
+	else if (First.characterClass == "Rogue")
+	{
+		
+		Rogue.name = First.name;
+		Rogue.race = First.race;
+		Rogue.characterClass = "Rogue";
+		
+	}
+	else if (First.characterClass == "Mage")
+	{
+		
+		Mage.name = First.name;
+		Mage.race = First.race;
+		Mage.characterClass = "Mage";
+		
+	}*/
+
+
+
+// Creating Character
 int main()
+// checks for class after credentials and prints out atrributes based on User choices
 {
-    std::cout << "Hello World!\n"; 
+	Character First;
+	Warrior Warrior;
+	Rogue Rogue;
+	Mage Mage;
+	First.CharacterCreation();
+	system("pause");
+	return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
