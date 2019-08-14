@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
 
@@ -8,20 +9,28 @@ using namespace std;
 class Character {
 
 protected:
-	void CharacterIntro() {
-		cout << name << ": " << "Hello, I am the " << race << " " << characterClass << " " << name << "\n";
-	}
-	;
-
-	// leaving it public so that I can access it from wherever needed 
-public:
+	
 	char raceSelect;
 	char classSelect;
 	string characterClass;
 	string race;
 	string name;
 	int health;
+	vector<string> inventory;
 
+public:
+
+	void AddInventory(string item) {
+		inventory.push_back(item);
+	};
+
+	vector<string>& Inventory() {
+		return inventory;
+	};
+
+	void CharacterIntro() {
+		cout << name << ": " << "Hello, I am the " << race << " " << characterClass << " " << name << "\n";
+	};
 
 	// Setting the Character Credentials for later use
 	void CharacterCreation() {
@@ -79,14 +88,23 @@ public:
 
 	}
 
+	void PrintInfo()
+	{
+		cout << "Base health : " << health << endl;
+	}
+
+
 };
 
 // definition for the sub classes of Character
 
 class Rogue : public Character {
-public:
+
+private:
 	string classSkill = "Shadow Step";
 	string signatureItem = "Thieves' Tools";
+	
+public:
 
 	void GetDescription() {
 		cout << " As a Rogue you are an individual with expertise in dexterity and illegal activities.\n";
@@ -106,10 +124,12 @@ public:
 };
 
 class Warrior : public Character {
-public:
+
+private:
 	string classSkill = "Rage";
 	string signatureItem = "Sigil";
 
+public:
 	void GetDescription() {
 		cout << " As a Warrior you are a reckless soldier that risks life and limb through physical combat.\n";
 	}
@@ -126,10 +146,12 @@ public:
 };
 
 class Mage : public Character {
-public:
+
+private:
 	string classSkill = "Studious";
 	string signatureItem = "Mana Bead";
 
+public:
 	void GetDescription() {
 		cout << " As a Mage, you are a manipulator of arcane energies to cast awesome spells.\n";
 	}
@@ -143,4 +165,6 @@ public:
 		GetDescription();
 		Character::CharacterIntro();
 	}
+	
+
 };
