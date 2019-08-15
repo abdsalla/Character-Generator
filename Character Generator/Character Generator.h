@@ -10,15 +10,16 @@ class Character {
 
 protected:
 	
-	char raceSelect;
-	char classSelect;
 	string characterClass;
-	string race;
-	string name;
 	int health;
 	vector<string> inventory;
 
 public:
+
+	char raceSelect;
+	char classSelect;
+	string race;
+	string name;
 
 	void AddInventory(string item) {
 		inventory.push_back(item);
@@ -66,14 +67,17 @@ public:
 		do {
 			if (classSelect == 'w' || classSelect == 'W') {
 				characterClass = "Warrior";
+				health = 200;
 				break;
 			}
 			else if (classSelect == 'r' || classSelect == 'R') {
 				characterClass = "Rogue";
+				health = 150;
 				break;
 			}
 			else if (classSelect == 'm' || classSelect == 'M') {
 				characterClass = "Mage";
+				health = 100;
 				break;
 			}
 			else {
@@ -111,15 +115,14 @@ public:
 	}
 
 	void PrintInfo() {
-		cout << "Name: " << name << endl;
-		cout << "Race: " << race << endl;
-		cout << "Class: " << characterClass << endl;
+		//cout << "Name: " << name << endl;
+		//cout << "Race: " << race << endl;
+		//cout << "Class: " << characterClass << endl;
 		cout << "Class Skill: " << classSkill << endl;
 		cout << "Signature Item: " << signatureItem << endl;
 		cout << "Nature: " << endl;
 		GetDescription();
-		Character::CharacterIntro();
-		PrintInfo();
+		//Character::CharacterIntro();
 	}
 };
 
@@ -135,13 +138,13 @@ public:
 	}
 
 	void PrintInfo() {
-		cout << "Name: " << name << endl;
-		cout << "Race: " << race << endl;
-		cout << "Class: " << characterClass << endl;
+		//cout << "Name: " << name << endl;
+		//cout << "Race: " << race << endl;
+		//cout << "Class: " << characterClass << endl;
 		cout << "Class Skill: " << classSkill << endl;
 		cout << "Signature Item: " << signatureItem << endl;
 		GetDescription();
-		Character::CharacterIntro();
+		//Character::CharacterIntro();
 	}
 };
 
@@ -157,13 +160,13 @@ public:
 	}
 
 	void PrintInfo() {
-		cout << "Name: " << name << endl;
-		cout << "Race: " << race << endl;
-		cout << "Class: " << characterClass << endl;
+		//cout << "Name: " << name << endl;
+		//cout << "Race: " << race << endl;
+		//cout << "Class: " << characterClass << endl;
 		cout << "Class Skill: " << classSkill << endl;
 		cout << "Signature Item: " << signatureItem << endl;
 		GetDescription();
-		Character::CharacterIntro();
+		//Character::CharacterIntro();
 	}
 	
 
