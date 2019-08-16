@@ -97,7 +97,6 @@ public:
 		cout << "Base health : " << health << endl;
 	}
 
-
 };
 
 // definition for the sub classes of Character
@@ -143,6 +142,7 @@ public:
 		//cout << "Class: " << characterClass << endl;
 		cout << "Class Skill: " << classSkill << endl;
 		cout << "Signature Item: " << signatureItem << endl;
+		cout << "Nature: " << endl;
 		GetDescription();
 		//Character::CharacterIntro();
 	}
@@ -165,6 +165,7 @@ public:
 		//cout << "Class: " << characterClass << endl;
 		cout << "Class Skill: " << classSkill << endl;
 		cout << "Signature Item: " << signatureItem << endl;
+		cout << "Nature: " << endl;
 		GetDescription();
 		//Character::CharacterIntro();
 	}

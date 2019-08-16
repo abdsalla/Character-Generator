@@ -22,6 +22,7 @@ adventurer's pack
 adventurer's pack
 adventurer's pack
 adventurer's pack
+adventurer's pack
 axe
 axe
 axe
@@ -43,6 +44,8 @@ axe
 axe
 axe
 axe
+axe
+sword
 sword
 sword
 sword
